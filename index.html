@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="web.css" />
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="ipllogo2.png" alt="" />
+      </div>
+
+      <!-- this is for background logo -->
+      <div class="background">
+        <img src="rcblogo.png" id="logobg" alt="" />
+      </div>
+
+      <div class="heading">
+        <h1 id="head">Royal Challengers Bangalore</h1>
+        <p id="description" style="font-weight: 500">
+          Royal Challengers Bangalore (RCB), officially known as Royal
+          Challengers Bengaluru, are a professional franchise cricket team based
+          in Bangalore, Karnataka, competing in the Indian Premier League (IPL).
+          Founded in 2008 by United Spirits, the team is named after the
+          company's liquor brand, Royal Challenge. The M. Chinnaswamy Stadium in
+          Bangalore serves as their home ground.
+        </p>
+        <button>WATCH NOW</button>
+      </div>
+
+      <!-- this is for main image -->
+      <div class="image">
+        <img id="myimage" src="rcbplayers1.jpg" alt="" />
+      </div>
+
+      <!-- now navbar -->
+      <div class="navbar">
+        <ul>
+          <li>Home</li>
+          <li>Team</li>
+          <li>Performance</li>
+          <li>Rank</li>
+        </ul>
+      </div>
+
+      <!-- one class is missing -->
+      <div class="empty"></div>
+
+      <!-- this is for remaining teams -->
+      <div class="list">
+        <ol>
+          <li
+            onclick="myFun('rcbplayers1.jpg', 'red', 'Royal Challengers Bangalore', 'rcblogo.png')"
+          >
+            RCB
+          </li>
+          <li
+            onclick="myFun('cskplayers1.jpg', 'gold', 'Chennai Super Kings', 'csklogo.png')"
+          >
+            CSK
+          </li>
+          <li
+            onclick="myFun('dcplayers.jpg', 'blue', 'Delhi Capitals', 'dclogo.png')"
+          >
+            DC
+          </li>
+          <li
+            onclick="myFun('miplayers.jpg', 'dodgerblue', 'Mumbai Indians', 'milogo.png')"
+          >
+            MI
+          </li>
+          <li
+            onclick="myFun('srhplayers.jpg', 'orangered', 'Sunrisers Hyderabad', 'srhlogo1.png')"
+          >
+            SRH
+          </li>
+          <li
+            onclick="myFun('pksplayers1.jpg', 'red', 'Punjab Kings', 'pkings.png')"
+          >
+            PBKS
+          </li>
+          <li
+            onclick="myFun('rrplayers.jpg', '#ff3385', 'Rajasthan Royals', 'rrlogo2.png')"
+          >
+            RR
+          </li>
+          <li
+            onclick="myFun('kkrplayers.jpg', 'purple', 'Kolkata Knight Riders', 'kkrlogo.png')"
+          >
+            KKR
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <script>
+      const teamData = {
+        "Royal Challengers Bangalore": `Royal Challengers Bangalore (RCB), officially known as Royal Challengers Bengaluru, are a professional franchise cricket team based in Bangalore, Karnataka, competing in the Indian Premier League (IPL). Founded in 2008 by United Spirits, the team is named after the company's liquor brand, Royal Challenge. The M. Chinnaswamy Stadium in Bangalore serves as their home ground.`,
+        "Chennai Super Kings": `Chennai Super Kings (CSK), captained by the legendary MS Dhoni, is one of the most successful franchises in the IPL. Founded in 2008, CSK has won the IPL title several times, known for its consistency and strong team culture. The team is famous for producing clutch performances under pressure and maintaining a balanced squad. Based in Chennai, Tamil Nadu, their home ground, M.A. Chidambaram Stadium, is a fortress. The yellow army, as their fans are called, provides unwavering support.`,
+        "Delhi Capitals": `Delhi Capitals (DC), previously known as Delhi Daredevils, is a franchise cricket team based in Delhi. Despite struggling in the early seasons, the team has made a remarkable comeback in recent years. With a strong core of young players and experienced leaders, DC has evolved into one of the IPL's top contenders. Known for their aggressive gameplay, they have managed to secure playoff spots in recent seasons.`,
+        "Mumbai Indians": `Mumbai Indians (MI), the most successful team in IPL history, is known for its all-around squad and strong leadership under Rohit Sharma. With multiple IPL titles, MI has set a benchmark for excellence in the league. Their home ground is the iconic Wankhede Stadium in Mumbai. Over the years, MI has produced legendary players and has one of the most well-balanced squads in the tournament. They are consistently known for their strategic gameplay and adaptability.`,
+        "Sunrisers Hyderabad": `Sunrisers Hyderabad (SRH), based in Hyderabad, is known for its exceptional bowling attack. Founded in 2012, SRH quickly established itself as a top contender by winning the IPL title in 2016. Led by dynamic captains over the years, the team has been known for its consistency, particularly in defending low totals. Their home ground, the Rajiv Gandhi International Cricket Stadium, has been a venue of thrilling matches, especially favoring bowlers.`,
+        "Punjab Kings": `Punjab Kings(PBKS), is a franchise based in Mohali, Punjab. The team has had its share of ups and downs in the IPL but remains a fan favorite due to its aggressive style of play. Despite not winning an IPL title, KXIP has come close in some seasons, with standout individual performances. The team is known for backing young talent and providing thrilling contests throughout the league.`,
+        "Rajasthan Royals": `Rajasthan Royals (RR) is best known for being the winner of the inaugural IPL season in 2008. Based in Jaipur, Rajasthan, RR has a reputation for spotting and nurturing young talent, which has been a consistent theme in their squad over the years. Their "moneyball" approach in the early seasons helped them compete against stronger teams despite a modest budget. RR's home ground is the Sawai Mansingh Stadium in Jaipur.`,
+        "Kolkata Knight Riders": `Kolkata Knight Riders (KKR), one of the most popular teams in the IPL, has won the IPL title twice under the captaincy of Gautam Gambhir. Known for their passionate fan base and star-studded lineup, KKR has been a formidable team in the league. Based in Kolkata, the team plays its home games at Eden Gardens, one of the largest cricket stadiums in the world. KKR is known for its aggressive style of play and solid all-around squad.`,
+      };
+
+      function myFun(image, colour, head, logo) {
+        document.getElementById("myimage").src = image;
+        document.querySelector(".empty").style.backgroundColor = colour;
+        document.querySelector("button").style.backgroundColor = colour;
+        document.getElementById("head").innerHTML = head;
+        document.getElementById("logobg").src = logo;
+        document.getElementById("description").innerHTML = teamData[head]; // Update the description based on the team
+      }
+    </script>
+  </body>
+</html>
